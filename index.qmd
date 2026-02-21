@@ -3,7 +3,11 @@ title: "compile info"
 format: html
 ---
 
-Final compilation was performed on linux; the windows-data was rendered beforehand.
+Notes:
+
+- final compilation was performed on linux
+- the windows-data was rendered beforehand, and can be found unaltered under `/windows_compiled_targets/`
+- the renv lockfile holds the project package state used for the linux-sided compilation of the documents.
 
 
 {{< include meta/_compile-info_v2.qmd >}}
