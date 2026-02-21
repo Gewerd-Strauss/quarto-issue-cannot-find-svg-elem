@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d1de7f98c2ff1e4416e5c263cb40b76e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,8 +80,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">svg-issue</span>
     </a>
@@ -136,20 +134,67 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Final compilation was performed on linux; the windows-data was rendered beforehand.</p>
 <div style="page-break-after: always;"></div>
 <hr>
 <p>Compilation Info:</p>
-<p>Date: 2026-02-21 14:55:44.430502<br>
-System: Windows 11 x64 (build 26100) (Claudius Main @ LAPTOP-C)<br>
-Platform: x86_64-w64-mingw32<br>
-Quarto: 1.8.24 @ D:/CLI/quarto/bin/quarto.exe @ D:/Dokumente neu/Repositories/quarto-issues/quarto-issue-cannot-find-svg-elem<br>
-R: 4.5.0 (2025-04-11 ucrt) @ D:/CLI/r/R-4.5.0<br>
-Git: 2.45.2.windows.1 @ D:/CLI/git/mingw64/bin/git.exe<br>
-Pandoc: 3.1.11 @ D:/CLI/pandoc/pandoc-3.1.11/pandoc.exe</p>
+<p>Date: 2026-02-21 15:02:48.567013<br>
+System: Linux Mint 22.2 (gewerd-strauss @ gewerdstrauss-B650E-AORUS-PRO-X-USB4)<br>
+Platform: x86_64-pc-linux-gnu<br>
+Quarto: 1.8.26 @ /opt/quarto/bin/quarto @ /media/gewerd-strauss/data/Repositories/quarto/quarto-issue-cannot-find-svg-elem<br>
+R: 4.5.2 (2025-10-31) @ /usr/lib/R<br>
+Git: 2.43.0 @ /usr/bin/git<br>
+Pandoc: 3.1.3 @ /usr/bin/pandoc</p>
 <hr>
 <ol type="1">
 <li>Output of <code>quarto check all</code> on linux:</li>
 </ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Quarto 1.8.26
+
+      Quarto cache location: /home/gewerd-strauss/.cache/quarto
+
+      Pandoc version 3.6.3: OK
+
+      Dart Sass version 1.87.0: OK
+
+      Deno version 2.3.1: OK
+
+      Typst version 0.13.0: OK
+
+      Version: 1.8.26
+
+      Path: /opt/quarto/bin
+
+      TinyTeX: v2026.01
+
+      Chromium: 869685
+
+      Using: TinyTex
+
+      Path: /home/gewerd-strauss/.TinyTeX/bin/x86_64-linux
+
+      Version: 2025
+
+      Chrome:  (not detected)
+
+      Version: 3.12.3
+      Path: /usr/bin/python3
+      Jupyter: (None)
+
+      Jupyter is not available in this Python installation.
+      Install with python3 -m pip install jupyter
+
+      Version: 4.5.2
+      Path: /usr/lib/R
+      LibPaths:
+        - /media/gewerd-strauss/data/Repositories/quarto/quarto-issue-cannot-find-svg-elem/renv/library/linux-linuxmint-noble/R-4.5/x86_64-pc-linux-gnu
+        - /home/gewerd-strauss/.cache/R/renv/sandbox/linux-linuxmint-noble/R-4.5/x86_64-pc-linux-gnu/9a444a72
+      knitr: 1.51
+      rmarkdown: 2.30</code></pre>
+</div>
+</div>
 <ol start="2" type="1">
 <li>and on windows:</li>
 </ol>
@@ -204,6 +249,11 @@ Pandoc: 3.1.11 @ D:/CLI/pandoc/pandoc-3.1.11/pandoc.exe</p>
 <ol start="3" type="1">
 <li>rsvg-convert (only on linux):</li>
 </ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>/usr/bin/rsvg-convert</code></pre>
+</div>
+</div>
 
 
 

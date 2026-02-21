@@ -3,7 +3,7 @@ title: "failure document"
 author: Gewerd-Strauss
 format:
   html: default
-  pdf: default
+#   pdf: default
 ---
 
 

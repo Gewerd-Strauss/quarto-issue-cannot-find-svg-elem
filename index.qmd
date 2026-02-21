@@ -3,6 +3,9 @@ title: "compile info"
 format: html
 ---
 
+Final compilation was performed on linux; the windows-data was rendered beforehand.
+
+
 {{< include meta/_compile-info_v2.qmd >}}
 
 ---
