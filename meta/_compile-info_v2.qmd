@@ -23,8 +23,6 @@ gv <- str_replace_all(system(git_cmd, intern = TRUE), "git version ", "")
 git_path_cmd <- ifelse(.Platform$OS.type == "windows", "where git", "which git")
 gp <- system(git_path_cmd, intern = TRUE)
 
-rsvg <- system("which rsvg-convert", intern = TRUE)
-
 # Quarto version and path
 qv <- quarto::quarto_version()
 qp <- quarto::quarto_path()
@@ -55,14 +53,3 @@ Quarto: `r qv` @ `r qp` @ `r getwd()`
 R: `r rv` @ `r rp`  
 Git: `r gv` @ `r gp`  
 Pandoc: `r pv` @ `r pp`
-
-
----
-
-Output of `quarto check all`:
-
-```{bash}
-cat res/qclog.txt
-```
-
-rsvg-convert: `r rsvg`

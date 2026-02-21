@@ -1,0 +1,57 @@
+Quarto 1.8.24
+
+      Quarto cache location: C:\Users\Claudius Main\AppData\Local\quarto
+
+      Pandoc version 3.6.3: OK
+
+      Dart Sass version 1.87.0: OK
+
+      Deno version 2.3.1: OK
+
+      Typst version 0.13.0: OK
+
+      Version: 1.8.24
+
+      Path: D:\CLI\quarto\bin
+
+      CodePage: 1252
+
+
+
+      TinyTeX: (external install)
+
+      Chromium: 869685
+
+
+
+      Using: Installation From Path
+
+      Path: D:\CLI\tinytex\bin\windows
+
+      Version: 2025
+
+
+
+      Using: Chrome found on system
+
+      Path: C:\Program Files\Google\Chrome\Application\chrome.exe
+
+      Source: Windows Registry
+
+
+
+      Unable to locate an installed version of Python 3.
+      Install Python 3 from https://www.python.org/downloads/
+
+
+
+      Version: 4.5.0
+      Path: D:/CLI/r/R-4.5.0
+      LibPaths:
+        - D:/Dokumente neu/Repositories/quarto-issues/quarto-issue-cannot-find-svg-elem/renv/library/windows/R-4.5/x86_64-w64-mingw32
+        - C:/Users/Claudius Main/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.5/x86_64-w64-mingw32/36b5bce2
+      knitr: 1.51
+      rmarkdown: 2.30
+
+
+

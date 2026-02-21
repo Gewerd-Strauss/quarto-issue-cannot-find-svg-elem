@@ -6,9 +6,6 @@ project:
     - "index.qmd"
     - "tests/failure.qmd"
     # -  "!failure.qmd"
-  pre-render: 
-    - scripts/pre-render/qc.sh
-
 
 website:
   title: "svg-issue"

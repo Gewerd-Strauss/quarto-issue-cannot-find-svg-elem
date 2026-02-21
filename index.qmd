@@ -5,4 +5,23 @@ format: html
 
 {{< include meta/_compile-info_v2.qmd >}}
 
+---
+
+1. Output of `quarto check all` on linux:
+
+```{bash}
+cat res/qclog_linux.txt
+```
+
+2. and on windows:
+
+```{bash}
+cat res/qclog_windows.txt
+```
+
+3. rsvg-convert (only on linux):
+
+```{bash}
+cat res/rsvglog_linux.txt
+```
 
