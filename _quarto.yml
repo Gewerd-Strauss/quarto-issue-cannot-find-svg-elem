@@ -1,0 +1,36 @@
+project:
+  type: website
+  execute-dir: project
+  output-dir: _site
+  render:
+    - "index.qmd"
+    - "tests/success.qmd"
+    - "tests/failure.qmd"
+    # -  "!failure.qmd"
+  pre-render: 
+    - scripts/pre-render/qc.sh
+
+
+website:
+  title: "svg-issue"
+  navbar:
+    left:
+      - href: index.qmd
+        text: compile-info
+        
+      - href: tests/success.qmd
+        text: successful compilation
+      - href: tests/failure.qmd
+        text: failing compilation
+
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+  pdf: default
+
+
