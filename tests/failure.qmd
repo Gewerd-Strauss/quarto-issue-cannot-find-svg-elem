@@ -95,7 +95,7 @@ metadata
   theme:
     - cosmo
     - brand
-  title: failure documen
+  title: failure document
   author: Gewerd-Strauss
   
 ERROR: Internal Error: Couldn't find an svg element in svg string
@@ -114,5 +114,5 @@ Stack trace:
     at async handleLanguageCells (file:///opt/quarto/bin/quarto.js:69663:34)
     at async file:///opt/quarto/bin/quarto.js:123930:41
     at async withTimingAsync (file:///opt/quarto/bin/quarto.js:18986:21)
-gewerd-strauss@gewerdstrauss-B650E-AORUS-PRO-X-USB4:/media/gewerd-strauss/data/Repositories/quarto/quarto-issue-cannot-find-svg-elem$ 
+
 ```
