@@ -1,0 +1,118 @@
+---
+title: "failure document"
+author: Gewerd-Strauss
+format:
+  html: default
+  # pdf: default
+---
+
+
+```{mermaid}
+%%| fig-width: 1.5
+%%| fig-height: 1.5
+%%| fig-dpi: 700
+flowchart LR
+    A([Start]) --> B{Boolean Condition}
+    B -->|Yes| C[[unterprogram]]
+    B -->|No| D[subblockB]
+    C --> E[/"Ein/Ausgabe"/]
+    D --> E[/"Ein/Ausgabe"/]
+    E --> F([End])
+```
+
+
+This file will refuse to compile to pdf; as it contains the above mermaid-block.
+Adding the render-target `pdf` as declared above yields this log/error: 
+
+```sh
+gewerd-strauss@gewerdstrauss-B650E-AORUS-PRO-X-USB4:/media/gewerd-strauss/data/Repositories/quarto/quarto-issue-cannot-find-svg-elem$ quarto render tests/failure.qmd 
+Quarto 1.8.26
+[✓] Checking environment information...
+      Quarto cache location: /home/gewerd-strauss/.cache/quarto
+[✓] Checking versions of quarto binary dependencies...
+      Pandoc version 3.6.3: OK
+      Dart Sass version 1.87.0: OK
+      Deno version 2.3.1: OK
+      Typst version 0.13.0: OK
+[✓] Checking versions of quarto dependencies......OK
+[✓] Checking Quarto installation......OK
+      Version: 1.8.26
+      Path: /opt/quarto/bin
+
+[✓] Checking tools....................OK
+      TinyTeX: v2026.01
+      Chromium: 869685
+
+[✓] Checking LaTeX....................OK
+      Using: TinyTex
+      Path: /home/gewerd-strauss/.TinyTeX/bin/x86_64-linux
+      Version: 2025
+
+[✓] Checking Chrome Headless....................OK
+      Chrome:  (not detected)
+
+[✓] Checking basic markdown render....OK
+
+[✓] Checking Python 3 installation....OK
+      Version: 3.12.3
+      Path: /usr/bin/python3
+      Jupyter: (None)
+
+      Jupyter is not available in this Python installation.
+      Install with python3 -m pip install jupyter
+
+[✓] Checking R installation...........OK
+      Version: 4.5.2
+      Path: /usr/lib/R
+      LibPaths:
+        - /media/gewerd-strauss/data/Repositories/quarto/quarto-issue-cannot-find-svg-elem/renv/library/linux-linuxmint-noble/R-4.5/x86_64-pc-linux-gnu
+        - /home/gewerd-strauss/.cache/R/renv/sandbox/linux-linuxmint-noble/R-4.5/x86_64-pc-linux-gnu/9a444a72
+      knitr: 1.51
+      rmarkdown: 2.30
+
+[✓] Checking Knitr engine render......OK
+
+
+pandoc 
+  to: html
+  output-file: failure.html
+  standalone: true
+  title-prefix: svg-issue
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  css:
+    - styles.css
+  toc: true
+  variables: {}
+  
+metadata
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  theme:
+    - cosmo
+    - brand
+  title: failure documen
+  author: Gewerd-Strauss
+  
+ERROR: Internal Error: Couldn't find an svg element in svg string
+
+This is a bug in quarto. We apologize for the inconvenience.
+Please consider reporting it at https://github.com/quarto-dev/quarto-cli. Thank you!
+
+Stack trace:
+    at resolveSize (file:///opt/quarto/bin/quarto.js:119715:11)
+    at eventLoopTick (ext:core/01_core.js:178:7)
+    at async makePng (file:///opt/quarto/bin/quarto.js:120114:11)
+    at async makeDefault (file:///opt/quarto/bin/quarto.js:120180:16)
+    at async Object.cell (file:///opt/quarto/bin/quarto.js:120213:14)
+    at async Promise.all (index 0)
+    at async Object.document (file:///opt/quarto/bin/quarto.js:69698:21)
+    at async handleLanguageCells (file:///opt/quarto/bin/quarto.js:69663:34)
+    at async file:///opt/quarto/bin/quarto.js:123930:41
+    at async withTimingAsync (file:///opt/quarto/bin/quarto.js:18986:21)
+gewerd-strauss@gewerdstrauss-B650E-AORUS-PRO-X-USB4:/media/gewerd-strauss/data/Repositories/quarto/quarto-issue-cannot-find-svg-elem$ 
+```

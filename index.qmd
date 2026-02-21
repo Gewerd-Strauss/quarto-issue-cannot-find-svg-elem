@@ -1,0 +1,8 @@
+---
+title: "compile info"
+format: html
+---
+
+{{< include meta/_compile-info_v2.qmd >}}
+
+

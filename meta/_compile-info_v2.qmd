@@ -1,0 +1,68 @@
+
+{{< pagebreak >}}
+
+---
+
+Compilation Info: 
+```{r knitr_default,echo=FALSE,warning=FALSE,results='hide'}
+knitr::opts_chunk$set(echo=F,warning=F)
+library(stringr)
+suppressMessages(library(lubridate))
+library(quarto)
+
+# R info
+r_ <- R.Version()
+r_pl <- r_$platform
+rv <- str_replace_all(r_$version.string, "R version ", "")
+
+
+# Git version and path
+git_cmd <- ifelse(.Platform$OS.type == "windows", "git --version", "git --version")
+gv <- str_replace_all(system(git_cmd, intern = TRUE), "git version ", "")
+
+git_path_cmd <- ifelse(.Platform$OS.type == "windows", "where git", "which git")
+gp <- system(git_path_cmd, intern = TRUE)
+
+rsvg <- system("which rsvg-convert", intern = TRUE)
+
+# Quarto version and path
+qv <- quarto::quarto_version()
+qp <- quarto::quarto_path()
+
+# Pandoc version and path
+pandoc_cmd <- ifelse(.Platform$OS.type == "windows", "pandoc -v", "pandoc --version")
+pv <- str_replace_all(system(pandoc_cmd, intern = TRUE)[1],
+                      ifelse(.Platform$OS.type == "windows", "pandoc.exe ", "pandoc "), "")
+
+pandoc_path_cmd <- ifelse(.Platform$OS.type == "windows", "where pandoc", "which pandoc")
+pp <- system(pandoc_path_cmd, intern = TRUE)
+
+# Normalize paths to forward slashes
+normalize_paths <- function(x) gsub("\\\\", "/", x)
+rp <- normalize_paths(R.home())
+gp <- normalize_paths(gp)
+qp <- normalize_paths(qp)
+pp <- normalize_paths(pp)
+
+# Current datetime
+dt <- as.character(lubridate::now())
+```
+
+Date: `r dt`  
+System: `r sessioninfo::os_name()` (`r str_c(Sys.info()["login"]," @ ",Sys.info()["nodename"])`)  
+Platform: `r r_pl`  
+Quarto: `r qv` @ `r qp` @ `r getwd()`  
+R: `r rv` @ `r rp`  
+Git: `r gv` @ `r gp`  
+Pandoc: `r pv` @ `r pp`
+
+
+---
+
+Output of `quarto check all`:
+
+```{bash}
+cat res/qclog.txt
+```
+
+rsvg-convert: `r rsvg`

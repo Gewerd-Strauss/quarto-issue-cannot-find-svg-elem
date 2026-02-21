@@ -4,7 +4,6 @@ project:
   output-dir: _site
   render:
     - "index.qmd"
-    - "tests/success.qmd"
     - "tests/failure.qmd"
     # -  "!failure.qmd"
   pre-render: 
@@ -17,9 +16,6 @@ website:
     left:
       - href: index.qmd
         text: compile-info
-        
-      - href: tests/success.qmd
-        text: successful compilation
       - href: tests/failure.qmd
         text: failing compilation
 
